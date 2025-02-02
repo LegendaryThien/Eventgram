@@ -16,5 +16,20 @@ export default async function Home() {
                 <h1 className="text-2xl font-bold">WEBSITE NAME</h1>
                 
                 <br></br>
-                <hr></hr>
+                <hr className="border-2 rounded-full"></hr>
                 <br></br>
+
+                <p className="text-xl font-bold text-[#B7B7B7]">Upcoming Events (3)</p>
+
+                <br></br>
+                <hr className="w-25 max-w-xs border-gray-400 border-2 rounded-full"></hr>
+                <br></br>
+
+                <div className = "ml-10 mr-4 rounded-md bg-[#3C3C3C] p-3 text-xs mb-6">
+                        <p className="text-lg font-bold text-[#B7B7B7]">Squid Game</p>
+                </div>
+      </div>
+      </body>
+    </HydrateClient>
+  );
+}
