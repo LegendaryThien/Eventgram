@@ -27,6 +27,7 @@ export default async function Home() {
 
                 <div className = "ml-10 mr-4 rounded-md bg-[#3C3C3C] p-3 text-xs mb-6">
                         <p className="text-lg font-bold text-[#B7B7B7]">Squid Game</p>
+                        <p className="w-[50%] text-xl">hleooooooooorireyiotuweyrtoiewurytoiweruytoiwuert</p>
                 </div>
       </div>
       </body>
