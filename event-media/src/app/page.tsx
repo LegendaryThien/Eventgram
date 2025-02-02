@@ -3,7 +3,8 @@ import Link from "next/link";
 import { LatestPost } from "~/app/_components/post";
 import { api, HydrateClient } from "~/trpc/server";
 import EventCreate from "./_components/event-create";
-
+import RSVP from "./_components/rsvp";
+import Comment from "./_components/comment";
 export default async function Home() {
   const hello = await api.post.hello({ text: "from tRPC" });
 
