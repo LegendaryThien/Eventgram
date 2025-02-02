@@ -25,7 +25,16 @@ export default async function Home() {
 
   const { data: events = [], error } = await supabase
     .from('eventpost')
-    .select<'eventpost', Event>();
+    .select()
+    .then(({ data, error }) => ({
+      data: data?.map(event => ({
+        title: event.eventname,
+        rsvpCount: event.rsvpCount,
+        host: event.eventhostname,
+        description: event.eventdescription
+      })) ?? [],
+      error
+    }));
 
   if (error) {
     console.error('Error fetching events:', error);
