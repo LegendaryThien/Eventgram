@@ -44,7 +44,7 @@ export default function Comments() {
     };
 
     return (
-        <Card className="w-1/2 bg-[#2F2F2F]">
+        <Card className="w-1/5 bg-[#2F2F2F]">
         <div className="mt-8 bg-[#2F2F2F]">
             <h2 className="text-2xl font-bold mb-4 text-white border-0 rounded-md">Comments</h2>
             
@@ -59,7 +59,7 @@ export default function Comments() {
                                 value={newComment}
                                 onChange={(e) => setNewComment(e.target.value)}
                                 placeholder="Write your comment..."
-                                className="w-1/3"
+                                className="w-1/3 text-black"
                             />
                             <Button onClick={handleAddComment}>Post</Button>
                         </div>

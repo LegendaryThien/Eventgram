@@ -2,6 +2,10 @@
 
 import { useState } from "react";
 
+export function printInput(){
+    console.log(<Input id="name" placeholder="Name of your project" className="text-black border-0 rounded-md"/>)
+}
+
 export default function EventCreate() {
   const [title, setTitle] = useState("");
   const [host, setHost] = useState("");
