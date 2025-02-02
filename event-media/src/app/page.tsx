@@ -5,6 +5,7 @@ import { LatestPost } from "~/app/_components/post";
 import { api, HydrateClient } from "~/trpc/server";
 import EventCreate from "./_components/event-create";
 import Image from 'next/image';
+import Counter from "./_components/counter";
 
 type Event = {
   title: string;
@@ -43,7 +44,7 @@ export default async function Home() {
 
   return (
     <HydrateClient>
-      <body className="bg-stone-900">
+      <div className="min-h-screen flex flex-col bg-stone-900">
         <div className="m-10 bg-[#2F2F2F] text-white text-sm rounded-md p-5 border-[#3C3C3C] w-[98%] mx-auto">
           <h1 className="text-2xl font-bold">Event Planner</h1>
           
@@ -61,7 +62,7 @@ export default async function Home() {
             <div key={index} className="mt-5 ml-10 mr-4 rounded-md bg-[#3C3C3C] p-3 text-xs mb-6">
               <div className="flex justify-between items-center mb-2">
                 <p className="text-lg font-bold text-[#B7B7B7]">{event.title}</p>
-                <p className="text-sm font-bold text-[#B7B7B7]">RSVP: {event.rsvpCount}</p>
+                <p className="text-sm font-bold text-[#B7B7B7]"><Counter></Counter>{/*RSVP: {event.rsvpCount}*/}</p>
               </div>
               <p className="mb-3 text-base font-bold text-[#B7B7B7]">{event.host}</p>
               <div className="w-1/2">
@@ -70,7 +71,7 @@ export default async function Home() {
             </div>
           ))}
         </div>
-      </body>
+      </div>
     </HydrateClient>
   );
 }
