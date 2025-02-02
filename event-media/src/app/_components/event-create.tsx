@@ -20,6 +20,10 @@ import {
   SelectValue,
 } from "~/components/ui/select"
 
+export function printInput(){
+    console.log(<Input id="name" placeholder="Name of your project" className="text-black border-0 rounded-md"/>)
+}
+
 export default function EventCreate() {
     return (
 <Card className="w-[350px] bg-[#2F2F2F]">

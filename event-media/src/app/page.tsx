@@ -61,9 +61,6 @@ export default async function Home() {
                 </div>
                 
       </div>
-      <EventCreate></EventCreate>
-      <RSVP></RSVP>
-      <Comments></Comments>
       </body>
     </HydrateClient>
   );
