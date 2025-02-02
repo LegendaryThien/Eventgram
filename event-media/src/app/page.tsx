@@ -31,7 +31,7 @@ export default async function Home() {
                     <p className="text-lg font-bold text-[#B7B7B7]">Squid Game</p>
                     <p className="text-sm font-bold text-[#B7B7B7]">RSVP: 0</p>
                   </div>
-                  <p className="mb-3 text-base font-bold text-[#B7B7B7]">Hawng In-ho</p>
+                  <p className="mb-3 text-base font-bold text-[#B7B7B7]">Hwang In-ho</p>
                   <div className="w-1/2">
                     <p className="text-sm">Hundreds of cash-strapped contestants accept an invitation to compete in children's games for a tempting prize, but the stakes are deadly.</p>
                   </div>
@@ -42,7 +42,7 @@ export default async function Home() {
                     <p className="text-lg font-bold text-[#B7B7B7]">Squid Game</p>
                     <p className="text-sm font-bold text-[#B7B7B7]">RSVP: 0</p>
                   </div>
-                  <p className="mb-3 text-base font-bold text-[#B7B7B7]">Hawng In-ho</p>
+                  <p className="mb-3 text-base font-bold text-[#B7B7B7]">Hwang In-ho</p>
                   <div className="w-1/2">
                     <p className="text-sm">Hundreds of cash-strapped contestants accept an invitation to compete in children's games for a tempting prize, but the stakes are deadly.</p>
                   </div>
@@ -53,7 +53,7 @@ export default async function Home() {
                     <p className="text-lg font-bold text-[#B7B7B7]">Squid Game</p>
                     <p className="text-sm font-bold text-[#B7B7B7]">RSVP: 0</p>
                   </div>
-                  <p className="mb-3 text-base font-bold text-[#B7B7B7]">Hawng In-ho</p>
+                  <p className="mb-3 text-base font-bold text-[#B7B7B7]">Hwang In-ho</p>
                   <div className="w-1/2">
                     <p className="text-sm">Hundreds of cash-strapped contestants accept an invitation to compete in children's games for a tempting prize, but the stakes are deadly.</p>
                   </div>
