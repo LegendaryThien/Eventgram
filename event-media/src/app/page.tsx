@@ -5,6 +5,8 @@ import { LatestPost } from "~/app/_components/post";
 import { api, HydrateClient } from "~/trpc/server";
 import EventCreate from "./_components/event-create";
 import Counter from "./_components/counter";
+import Comments from "./_components/comment";
+import RSVP from "./_components/rsvp";
 
 type Event = {
   title: string;
@@ -45,7 +47,7 @@ export default async function Home() {
     <HydrateClient>
       <div className="min-h-screen flex flex-col bg-stone-900">
         <div className="m-10 bg-[#2F2F2F] text-white text-sm rounded-md p-5 border-[#3C3C3C] w-[98%] mx-auto">
-          <h1 className="text-2xl font-bold">Event Planner</h1>
+          <h1 className="text-2xl font-bold">EventGram</h1>
           
           <br />
           <hr className="border-2 rounded-full" />
@@ -71,6 +73,9 @@ export default async function Home() {
           ))}
         </div>
         <EventCreate />
+        <Comments></Comments>
+        <RSVP></RSVP>
+        <LatestPost></LatestPost>
       </div>
     </HydrateClient>
   );
