@@ -12,9 +12,7 @@ export default async function Home() {
   return (
     <HydrateClient>
       <main>
-        <EventCreate>
-          
-        </EventCreate>
+        
       </main>
     </HydrateClient>
   );
