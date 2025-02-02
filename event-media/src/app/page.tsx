@@ -62,7 +62,11 @@ export default async function Home() {
             <div key={index} className="mt-5 ml-10 mr-4 rounded-md bg-[#3C3C3C] p-3 text-xs mb-6">
               <div className="flex justify-between items-center mb-2">
                 <p className="text-lg font-bold text-[#B7B7B7]">{event.title}</p>
+
+                <Counter></Counter>
+
                 <p className="text-sm font-bold text-[#B7B7B7]"><Counter></Counter>{/*RSVP: {event.rsvpCount}*/}</p>
+
               </div>
               <p className="mb-3 text-base font-bold text-[#B7B7B7]">{event.host}</p>
               <div className="w-1/2">
@@ -71,7 +75,12 @@ export default async function Home() {
             </div>
           ))}
         </div>
+
+      </body>
+      <EventCreate />
+
       </div>
+
     </HydrateClient>
   );
 }
