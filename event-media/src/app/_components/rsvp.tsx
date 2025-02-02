@@ -15,16 +15,16 @@ import { Label } from "~/components/ui/label"
 
 export default function RSVP() {
     return (
-        <div className="mt-8 flex flex-col items-center max-w-2xl mx-auto">
-            <Card className="w-[350px]">
+        <div className="mt-8 flex flex-col max-w-2xl">
+            <Card className="w-[760px] bg-[#2F2F2F]">
                 <CardHeader>
-                    <CardTitle>RSVP</CardTitle>
+                    <CardTitle className="text-white border-0 rounded-md">RSVP</CardTitle>
                     <CardDescription>Please let us know if you can make it!</CardDescription>
                 </CardHeader>
                 <CardContent>
                     <form>
-                        <div className="grid w-full items-center gap-4">
-                            <div className="flex flex-col space-y-1.5">
+                        <div className="grid w-full gap-4">
+                            <div className="flex flex-col space-y-1.5 text-white border-0 rounded-md">
                                 <Label htmlFor="name">Name</Label>
                                 <Input id="name" placeholder="Your Name" />
                                 <Label htmlFor="email">Email</Label>

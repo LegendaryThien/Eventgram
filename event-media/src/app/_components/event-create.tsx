@@ -31,24 +31,24 @@ export default function EventCreate() {
           <div className="grid w-full items-center gap-4">
             <div className="flex flex-col space-y-1.5 text-white border-0 rounded-md">
               <Label htmlFor="name">Name</Label>
-              <Input id="name" placeholder="Name of your project" />
+              <Input id="name" placeholder="Name of your project" className="text-black border-0 rounded-md"/>
             </div>
             <div className="flex flex-col space-y-1.5 text-white border-0 rounded-md">
               <Label htmlFor="framework">Start Date</Label>
-              <Input id="date" placeholder="Start Date"></Input>
+              <Input id="date" placeholder="Start Date" className="text-black border-0 rounded-md"></Input>
             </div>
             <div className="flex flex-col space-y-1.5 text-white border-0 rounded-md">
               <Label htmlFor="starttime">Start Time</Label>
-              <Input id="time" placeholder="Start Time"></Input>
+              <Input id="time" placeholder="Start Time" className="text-black border-0 rounded-md"></Input>
             </div>
             <div className="flex flex-col space-y-1.5 text-white border-0 rounded-md">
               <Label htmlFor="host">Host</Label>
-              <Input id="name" placeholder="Name"></Input>
-              <Input id="Email" placeholder="Email"></Input>
+              <Input id="name" placeholder="Name" className="text-black border-0 rounded-md"></Input>
+              <Input id="Email" placeholder="Email" className="text-black border-0 rounded-md"></Input>
             </div>
             <div className="flex flex-col space-y-1.5 text-white border-0 rounded-md">
               <Label htmlFor="description">Description</Label>
-              <Input id="description" placeholder="What's your event about?"></Input>
+              <Input id="description" placeholder="What's your event about?" className="text-black border-0 rounded-md"></Input>
             </div>
           </div>
         </form>

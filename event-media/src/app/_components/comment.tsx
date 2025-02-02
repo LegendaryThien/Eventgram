@@ -44,20 +44,22 @@ export default function Comments() {
     };
 
     return (
-        <div className="mt-8">
-            <h2 className="text-2xl font-bold mb-4">Comments</h2>
+        <Card className="w-1/2 bg-[#2F2F2F]">
+        <div className="mt-8 bg-[#2F2F2F]">
+            <h2 className="text-2xl font-bold mb-4 text-white border-0 rounded-md">Comments</h2>
             
             {/* Add comment form */}
-            <Card className="mb-4">
+            <Card className="mb-4 bg-[#2F2F2F]">
                 <CardContent className="pt-6">
-                    <div className="flex flex-col space-y-1.5">
+                    <div className="flex flex-col space-y-1.5 text-white border-0 rounded-md">
                         <Label htmlFor="newComment">Add a comment</Label>
-                        <div className="flex gap-2">
+                        <div className="flex gap-2 ">
                             <Input
                                 id="newComment"
                                 value={newComment}
                                 onChange={(e) => setNewComment(e.target.value)}
                                 placeholder="Write your comment..."
+                                className="w-1/3"
                             />
                             <Button onClick={handleAddComment}>Post</Button>
                         </div>
@@ -66,19 +68,20 @@ export default function Comments() {
             </Card>
 
             {/* Existing comments list */}
-            <div className="space-y-4">
+            <div className="space-y-4 ">
                 {comments.map((comment) => (
-                    <Card key={comment.id}>
+                    <Card key={comment.id} className="bg-[#2F2F2F]">
                         <CardHeader>
-                            <CardTitle className="text-sm font-medium">{comment.author}</CardTitle>
-                            <CardDescription>{comment.date.toLocaleDateString()}</CardDescription>
+                            <CardTitle className="text-sm font-medium w-1/3 text-white border-0 rounded-md">{comment.author}</CardTitle>
+                            <CardDescription className="text-white border-0 rounded-md">{comment.date.toLocaleDateString()}</CardDescription>
                         </CardHeader>
                         <CardContent>
-                            <p>{comment.text}</p>
+                            <p className="text-white border-0 rounded-md">{comment.text}</p>
                         </CardContent>
                     </Card>
                 ))}
             </div>
         </div>
+        </Card>
     );
 }
