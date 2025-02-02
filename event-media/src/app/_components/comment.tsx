@@ -59,7 +59,7 @@ export default function Comments() {
                                 value={newComment}
                                 onChange={(e) => setNewComment(e.target.value)}
                                 placeholder="Write your comment..."
-                                className="w-1/3"
+                                className="w-1/3 text-black"
                             />
                             <Button onClick={handleAddComment}>Post</Button>
                         </div>
