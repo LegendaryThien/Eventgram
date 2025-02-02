@@ -1,66 +1,70 @@
+"use client";
 
-import * as React from "react"
- 
-import { Button } from "~/components/ui/button"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "~/components/ui/card"
-import { Input } from "~/components/ui/input"
-import { Label } from "~/components/ui/label"
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "~/components/ui/select"
+import { useState } from "react";
 
 export function printInput(){
     console.log(<Input id="name" placeholder="Name of your project" className="text-black border-0 rounded-md"/>)
 }
 
 export default function EventCreate() {
-    return (
-<Card className="w-[350px] bg-[#2F2F2F]">
-      <CardHeader>
-        <CardTitle className="text-white border-0 rounded-md">Create Event</CardTitle>
-      </CardHeader>
-      <CardContent>
-        <form>
-          <div className="grid w-full items-center gap-4">
-            <div className="flex flex-col space-y-1.5 text-white border-0 rounded-md">
-              <Label htmlFor="name">Name</Label>
-              <Input id="name" placeholder="Name of your project" className="text-black border-0 rounded-md"/>
-            </div>
-            <div className="flex flex-col space-y-1.5 text-white border-0 rounded-md">
-              <Label htmlFor="framework">Start Date</Label>
-              <Input id="date" placeholder="Start Date" className="text-black border-0 rounded-md"></Input>
-            </div>
-            <div className="flex flex-col space-y-1.5 text-white border-0 rounded-md">
-              <Label htmlFor="starttime">Start Time</Label>
-              <Input id="time" placeholder="Start Time" className="text-black border-0 rounded-md"></Input>
-            </div>
-            <div className="flex flex-col space-y-1.5 text-white border-0 rounded-md">
-              <Label htmlFor="host">Host</Label>
-              <Input id="name" placeholder="Name" className="text-black border-0 rounded-md"></Input>
-              <Input id="Email" placeholder="Email" className="text-black border-0 rounded-md"></Input>
-            </div>
-            <div className="flex flex-col space-y-1.5 text-white border-0 rounded-md">
-              <Label htmlFor="description">Description</Label>
-              <Input id="description" placeholder="What's your event about?" className="text-black border-0 rounded-md"></Input>
-            </div>
-          </div>
-        </form>
-      </CardContent>
-      <CardFooter className="flex justify-between">
-        <Button variant="outline">Cancel</Button>
-        <Button>Create</Button>
-      </CardFooter>
-    </Card>
-  )
+  const [title, setTitle] = useState("");
+  const [host, setHost] = useState("");
+  const [description, setDescription] = useState("");
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // TODO: Add API call to create event
+    const newEvent = {
+      title,
+      host,
+      description,
+      rsvpCount: 0,
+    };
+    
+    console.log("New event:", newEvent);
+    // Reset form
+    setTitle("");
+    setHost("");
+    setDescription("");
+  };
+
+  return (
+    <form onSubmit={handleSubmit} className="mb-6 space-y-4">
+      <div>
+        <input
+          type="text"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          placeholder="Event Title"
+          className="w-full p-2 rounded bg-[#3C3C3C] text-white"
+          required
+        />
+      </div>
+      <div>
+        <input
+          type="text"
+          value={host}
+          onChange={(e) => setHost(e.target.value)}
+          placeholder="Host Name"
+          className="w-full p-2 rounded bg-[#3C3C3C] text-white"
+          required
+        />
+      </div>
+      <div>
+        <textarea
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+          placeholder="Event Description"
+          className="w-full p-2 rounded bg-[#3C3C3C] text-white"
+          required
+        />
+      </div>
+      <button
+        type="submit"
+        className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+      >
+        Create Event
+      </button>
+    </form>
+  );
 }
