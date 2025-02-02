@@ -50,7 +50,7 @@ export default function EventCreate() {
 
             const { error } = await supabase
                 .from('eventpost')
-                .insert([{
+                .upsert([{
                     eventid: eventid,  // Add the generated ID
                     eventname: formData.eventname,
                     eventdescription: formData.eventdescription,
