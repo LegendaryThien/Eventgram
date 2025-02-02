@@ -3,7 +3,8 @@ import Link from "next/link";
 import { LatestPost } from "~/app/_components/post";
 import { api, HydrateClient } from "~/trpc/server";
 import EventCreate from "./_components/event-create";
-
+import RSVP from "./_components/rsvp";
+import Comment from "./_components/comment";
 export default async function Home() {
   const hello = await api.post.hello({ text: "from tRPC" });
 
@@ -11,6 +12,7 @@ export default async function Home() {
 
   return (
     <HydrateClient>
+<<<<<<< HEAD
       <body className="bg-stone-900">
       <div className="m-10 bg-[#2F2F2F] text-white text-sm rounded-md p-5 border-[#3C3C3C] w-[98%] mx-auto">
                 <h1 className="text-2xl font-bold">WEBSITE NAME</h1>
@@ -30,6 +32,10 @@ export default async function Home() {
                 </div>
       </div>
       </body>
+=======
+      <main>
+      </main>
+>>>>>>> e9747d7 (rsvp and comment)
     </HydrateClient>
   );
 }
